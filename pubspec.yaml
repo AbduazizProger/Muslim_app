@@ -1,0 +1,36 @@
+name: islam
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: 
+  shared_preferences: ^2.1.2
+  youtube_player_flutter: ^8.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  assets:
+  - assets/fonts/
+  - assets/images/
+  - assets/audios/
+  - assets/json/surah_names/
+  - assets/json/surah_pages/
+  - assets/json/names_99/
+
+  fonts:
+  - family: ScheherazadeNew
+    fonts:
+      - asset: assets/fonts/ScheherazadeNew-Bold.ttf
+
+  uses-material-design: true
