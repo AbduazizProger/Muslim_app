@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islam/ui/components/video_widget.dart';
+import 'package:Muslim/ui/components/video_widget.dart';
 
 class IslamPage extends StatelessWidget {
   const IslamPage({super.key});
@@ -9,14 +9,14 @@ class IslamPage extends StatelessWidget {
     return ListView(
       children: const [
         VideoWidget(
-          videoId: 'Ow5d54nwEfk',
-          name: 'What is Islam All About',
-          image: 'assets/images/what_islam.jpg',
+          videoId: 'Qa4scKFFICQ',
+          name: 'Iymon nima',
+          image: 'assets/images/iymon.jpg',
         ),
         VideoWidget(
-          videoId: '_wHQyM3LE-s',
-          name: 'Islam & Iman',
-          image: 'assets/images/islam&eman.jpg',
+          videoId: 'YykTR7D5vdU',
+          name: 'Islom arkonlari',
+          image: 'assets/images/islom.jpg',
         ),
       ],
     );

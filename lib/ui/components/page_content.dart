@@ -1,7 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islam/models/page_model.dart';
+import 'package:Muslim/functions/get_arabic_nums.dart';
+import 'package:Muslim/models/page_model.dart';
 
 class PageContentWidget extends StatefulWidget {
   const PageContentWidget({super.key, required this.pageNum});
@@ -42,12 +43,12 @@ class _PageContentWidgetState extends State<PageContentWidget> {
         TextSpan(
           text: ayah.text.toString() ==
                   '﻿بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ'
-              ? 'أَعُوْذُ بِاللّٰهِ مِنَ الشَّيْطٰانِ الرَّجِيْمِ\n${ayah.text} ۝${ayah.numberInSurah}\n'
+              ? 'أَعُوْذُ بِاللّٰهِ مِنَ الشَّيْطٰانِ الرَّجِيْمِ\n${ayah.text} ۝${convertToArabicNumbers(ayah.numberInSurah)}\n'
               : ayah.text
                       .toString()
                       .startsWith('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ')
-                  ? 'أَعُوْذُ بِاللّٰهِ مِنَ الشَّيْطٰانِ الرَّجِيْمِ\n﻿بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ \n ${ayah.text.toString().split('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ')[1]} ۝${ayah.numberInSurah} '
-                  : '${ayah.text} ۝${ayah.numberInSurah} ',
+                  ? 'أَعُوْذُ بِاللّٰهِ مِنَ الشَّيْطٰانِ الرَّجِيْمِ\n﻿بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ \n ${ayah.text.toString().split('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ')[1]} ۝${convertToArabicNumbers(ayah.numberInSurah)} '
+                  : '${ayah.text} ۝${convertToArabicNumbers(ayah.numberInSurah)}',
           style: const TextStyle(fontFamily: 'ScheherazadeNew', fontSize: 28),
         ),
       ]);

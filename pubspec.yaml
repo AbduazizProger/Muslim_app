@@ -1,4 +1,4 @@
-name: islam
+name: Muslim
 description: A new Flutter project.
 publish_to: 'none'
 version: 0.1.0
@@ -10,6 +10,9 @@ dependencies:
   flutter:
     sdk: flutter
   http: 
+  pdfx: ^2.4.0
+  audioplayers: ^4.0.1
+  device_info_plus: ^9.0.2
   shared_preferences: ^2.1.2
   youtube_player_flutter: ^8.1.2
 
@@ -22,6 +25,7 @@ flutter:
 
   assets:
   - assets/fonts/
+  - assets/files/
   - assets/images/
   - assets/audios/
   - assets/json/surah_names/

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:islam/ui/components/first_column.dart';
-import 'package:islam/ui/components/second_column.dart';
-import 'package:islam/ui/components/third_column.dart';
+import 'package:Muslim/ui/components/third_column.dart';
+import 'package:Muslim/ui/components/second_column.dart';
+import 'package:Muslim/ui/components/first_column.dart';
 
 class ComponentsPage extends StatelessWidget {
   const ComponentsPage({super.key});

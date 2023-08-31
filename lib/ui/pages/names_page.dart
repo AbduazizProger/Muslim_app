@@ -1,9 +1,10 @@
 import 'dart:convert';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
-import 'package:islam/models/name_model.dart';
-import 'package:islam/ui/components/name_widget.dart';
-import 'package:islam/ui/pages/islam_video.dart';
+import 'package:Muslim/models/name_model.dart';
+import 'package:Muslim/ui/components/name_image.dart';
+import 'package:Muslim/ui/components/name_widget.dart';
 
 class NamesPage extends StatefulWidget {
   const NamesPage({super.key});
@@ -13,6 +14,9 @@ class NamesPage extends StatefulWidget {
 }
 
 class _NamesPageState extends State<NamesPage> {
+  AudioPlayer audioPlayer = AudioPlayer();
+  bool isPlaying = false;
+
   List<Name> names_99 = [];
   Future<void> fetchNames() async {
     final String response =
@@ -25,7 +29,18 @@ class _NamesPageState extends State<NamesPage> {
   @override
   void initState() {
     super.initState();
+    audioPlayer.onPlayerComplete.listen((event) {
+      isPlaying = false;
+      audioPlayer.stop();
+      setState(() {});
+    });
     fetchNames().then((_) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    audioPlayer.stop();
+    super.dispose();
   }
 
   @override
@@ -39,24 +54,7 @@ class _NamesPageState extends State<NamesPage> {
         itemCount: names_99.length + 1,
         itemBuilder: (context, index) {
           if (index == 0) {
-            return Padding(
-              padding: const EdgeInsets.all(10),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) {
-                        return const IslamVideo(videoId: 'tTao6LY05zw');
-                      },
-                    ),
-                  );
-                },
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(30),
-                  child: Image.asset('assets/images/names_99.jpg'),
-                ),
-              ),
-            );
+            return const NameVideoImage();
           }
           return Padding(
             padding: const EdgeInsets.all(3),
@@ -65,8 +63,25 @@ class _NamesPageState extends State<NamesPage> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.play_arrow_rounded, size: 40),
-        onPressed: () {},
+        child: Icon(
+          isPlaying ? Icons.pause : Icons.play_arrow_rounded,
+          size: 40,
+        ),
+        onPressed: () {
+          if (isPlaying) {
+            audioPlayer.pause();
+            setState(() {});
+          } else {
+            audioPlayer.state == PlayerState.paused
+                ? audioPlayer.play(AssetSource('audios/names_99.mp3'))
+                : audioPlayer.play(
+                    AssetSource('audios/names_99.mp3'),
+                    position: const Duration(seconds: 9),
+                  );
+            setState(() {});
+          }
+          isPlaying = !isPlaying;
+        },
       ),
     );
   }

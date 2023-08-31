@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:islam/models/appbar_model.dart';
-import 'package:islam/ui/pages/home_page.dart';
+import 'package:Muslim/models/appbar_model.dart';
+import 'package:Muslim/ui/pages/home_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBarModel(
-      text: "Muslim's app",
+      text: "Muslim dasturi",
       child: MaterialApp(
         theme: ThemeData.dark(
           useMaterial3: true,

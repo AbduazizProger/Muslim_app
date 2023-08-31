@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islam/models/surah_names_model.dart';
+import 'package:Muslim/models/surah_names_model.dart';
 
 class SurahNameWidget extends StatelessWidget {
   const SurahNameWidget({

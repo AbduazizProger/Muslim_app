@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:islam/models/appbar_model.dart';
-import 'package:islam/ui/pages/components_page.dart';
-import 'package:islam/ui/pages/settings_page.dart';
-import 'package:islam/ui/pages/islam_page.dart';
+import 'package:Muslim/models/appbar_model.dart';
+import 'package:Muslim/ui/pages/components_page.dart';
+import 'package:Muslim/ui/pages/settings_page.dart';
+import 'package:Muslim/ui/pages/islam_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -30,13 +30,13 @@ class _HomePageState extends State<HomePage> {
           pageIndex = value;
           if (value == 2) {
             context.dependOnInheritedWidgetOfExactType<AppBarModel>()!.text =
-                'Settings';
+                'Sozlamalar';
           } else if (value == 1) {
             context.dependOnInheritedWidgetOfExactType<AppBarModel>()!.text =
-                'Learning';
+                "O'rganish";
           } else {
             context.dependOnInheritedWidgetOfExactType<AppBarModel>()!.text =
-                "Muslim's app";
+                "Muslim dasturi";
           }
           setState(() {});
         },
@@ -52,12 +52,14 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.grid_on), label: 'Main'),
+          BottomNavigationBarItem(icon: Icon(Icons.grid_on), label: 'Asosiy'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.list_alt), label: 'Learning'),
+            icon: Icon(Icons.list_alt),
+            label: "O'rganish",
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
-            label: 'Settings',
+            label: 'Sozlamalar',
           ),
         ],
         selectedItemColor: Colors.green,
@@ -71,13 +73,13 @@ class _HomePageState extends State<HomePage> {
           );
           if (value == 2) {
             context.dependOnInheritedWidgetOfExactType<AppBarModel>()!.text =
-                'Settings';
+                'Sozlamalar';
           } else if (value == 1) {
             context.dependOnInheritedWidgetOfExactType<AppBarModel>()!.text =
-                'Learning';
+                "O'rganish";
           } else {
             context.dependOnInheritedWidgetOfExactType<AppBarModel>()!.text =
-                "Muslim's app";
+                "Muslim dasturi";
           }
           setState(() {});
         },

@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:islam/ui/pages/fasting_page.dart';
-import 'package:islam/ui/pages/names_page.dart';
-import 'package:islam/ui/pages/surah_names_page.dart';
+import 'package:Muslim/ui/pages/dua_page.dart';
+import 'package:Muslim/ui/pages/tv_page.dart';
+import 'package:Muslim/ui/pages/zikr_page.dart';
 
-class FirstWidget extends StatelessWidget {
-  const FirstWidget({
+class ThirdWidget extends StatelessWidget {
+  const ThirdWidget({
     super.key,
   });
 
@@ -15,8 +15,8 @@ class FirstWidget extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            Navigator.of(context).push(CupertinoPageRoute(builder: (context) {
-              return const SurahNamesPage();
+            Navigator.of(context).push(CupertinoPageRoute(builder: (_) {
+              return const TVPage();
             }));
           },
           child: Container(
@@ -28,12 +28,12 @@ class FirstWidget extends StatelessWidget {
             child: Column(
               children: [
                 Icon(
-                  Icons.menu_book_rounded,
+                  Icons.tv,
                   size: 90,
                   color: Colors.green[900],
                 ),
                 Text(
-                  'Quran',
+                  'TV',
                   style: TextStyle(
                     color: Colors.green[900],
                     fontWeight: FontWeight.bold,
@@ -47,9 +47,11 @@ class FirstWidget extends StatelessWidget {
         const SizedBox(height: 20),
         GestureDetector(
           onTap: () {
-            Navigator.of(context).push(CupertinoPageRoute(builder: (context) {
-              return const NamesPage();
-            }));
+            Navigator.of(context).push(
+              CupertinoPageRoute(builder: (_) {
+                return const ZikrPage();
+              }),
+            );
           },
           child: Container(
             padding: const EdgeInsets.all(15),
@@ -60,12 +62,12 @@ class FirstWidget extends StatelessWidget {
             child: Column(
               children: [
                 Image.asset(
-                  'assets/images/belief.png',
+                  'assets/images/tasbih.png',
                   width: 90,
                   color: Colors.green[900],
                 ),
                 Text(
-                  '99 names',
+                  'Zikr',
                   style: TextStyle(
                     color: Colors.green[900],
                     fontWeight: FontWeight.bold,
@@ -79,9 +81,11 @@ class FirstWidget extends StatelessWidget {
         const SizedBox(height: 20),
         GestureDetector(
           onTap: () {
-            Navigator.of(context).push(CupertinoPageRoute(builder: (context) {
-              return const FastingPage();
-            }));
+            Navigator.of(context).push(
+              CupertinoPageRoute(builder: (_) {
+                return const DuaPage();
+              }),
+            );
           },
           child: Container(
             padding: const EdgeInsets.all(15),
@@ -92,12 +96,12 @@ class FirstWidget extends StatelessWidget {
             child: Column(
               children: [
                 Image.asset(
-                  'assets/images/fasting.png',
+                  'assets/images/prayer.png',
                   width: 90,
                   color: Colors.green[900],
                 ),
                 Text(
-                  'Fasting',
+                  'Duo',
                   style: TextStyle(
                     color: Colors.green[900],
                     fontWeight: FontWeight.bold,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islam/models/name_model.dart';
+import 'package:Muslim/models/name_model.dart';
 
 class NameWidget extends StatelessWidget {
   const NameWidget({

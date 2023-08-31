@@ -17,7 +17,8 @@ class Ayah {
     return Ayah(
       number: json['number'],
       text: json['text'],
-      isSajda: json['sajda'],
+      isSajda:
+          json['sajda'] is bool ? json['sajda'] : json['sajda']['recommended'],
       numberInSurah: json['numberInSurah'],
       surahName: json['surah']['name'],
     );

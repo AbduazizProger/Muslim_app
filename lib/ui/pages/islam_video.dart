@@ -30,6 +30,7 @@ class _IslamVideoState extends State<IslamVideo> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Video'),
+        centerTitle: true,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islam/models/surah_names_model.dart';
-import 'package:islam/ui/components/surah_name.dart';
-import 'package:islam/ui/pages/quran_page.dart';
+import 'package:Muslim/models/surah_names_model.dart';
+import 'package:Muslim/ui/components/surah_name.dart';
+import 'package:Muslim/ui/pages/quran_page.dart';
 
 class SurahNamesPage extends StatefulWidget {
   const SurahNamesPage({super.key});

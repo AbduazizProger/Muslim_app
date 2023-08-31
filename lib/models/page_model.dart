@@ -1,4 +1,4 @@
-import 'package:islam/models/ayah_model.dart';
+import 'package:Muslim/models/ayah_model.dart';
 
 class PageModel {
   final int number;
