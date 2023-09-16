@@ -1,7 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:Muslim/models/appbar_model.dart';
 import 'package:Muslim/ui/pages/components_page.dart';
-import 'package:Muslim/ui/pages/settings_page.dart';
+import 'package:Muslim/ui/pages/learn_page.dart';
 import 'package:Muslim/ui/pages/islam_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,10 +31,10 @@ class _HomePageState extends State<HomePage> {
           pageIndex = value;
           if (value == 2) {
             context.dependOnInheritedWidgetOfExactType<AppBarModel>()!.text =
-                'Sozlamalar';
+                'Vaqt';
           } else if (value == 1) {
             context.dependOnInheritedWidgetOfExactType<AppBarModel>()!.text =
-                "O'rganish";
+                "Islom";
           } else {
             context.dependOnInheritedWidgetOfExactType<AppBarModel>()!.text =
                 "Muslim dasturi";
@@ -47,19 +48,19 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           const IslamPage(),
-          const SettingsPage(),
+          const LearnPage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.grid_on), label: 'Asosiy'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.list_alt),
-            label: "O'rganish",
+            icon: Icon(CupertinoIcons.moon_fill),
+            label: "Islom",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Sozlamalar',
+            icon: Icon(Icons.access_time_filled),
+            label: 'Vaqt',
           ),
         ],
         selectedItemColor: Colors.green,

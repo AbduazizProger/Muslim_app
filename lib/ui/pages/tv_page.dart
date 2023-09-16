@@ -14,18 +14,18 @@ class TVPage extends StatelessWidget {
       body: ListView(
         children: const [
           VideoWidget(
-            videoId: 'UtvBCFyq2eI',
-            name: 'Makka LIVE',
+            videoId: 'LcXHEclyfcs',
+            name: 'Makka haqida',
             image: 'assets/images/makkah.png',
           ),
           VideoWidget(
-            videoId: 'gUC3TjCrwRw',
-            name: 'Madina LIVE',
+            videoId: '3-ILPtaCey4',
+            name: "Payg'ambarimiz ravzalari\n haqida",
             image: 'assets/images/medinah.jpg',
           ),
           VideoWidget(
-            videoId: 'Ly5NG0LCsT0',
-            name: 'Islom.uz LIVE',
+            videoId: 'c7RDfh2cTDQ',
+            name: 'Islom haqida',
             image: 'assets/images/islom_uz.jpg',
           ),
         ],

@@ -49,7 +49,8 @@ class VideoWidget extends StatelessWidget {
               child: Stack(
                 alignment: Alignment.center,
                 children: [
-                  Image.asset(image, width: name.contains('LIVE') ? 250 : null),
+                  Image.asset(image,
+                      width: name.contains('haqida') ? 250 : null),
                   const Icon(Icons.play_arrow_rounded, size: 80),
                 ],
               ),
@@ -57,6 +58,7 @@ class VideoWidget extends StatelessWidget {
             const SizedBox(height: 15),
             Text(
               name,
+              textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
           ],
