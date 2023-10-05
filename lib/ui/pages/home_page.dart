@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
           );
           if (value == 2) {
             context.dependOnInheritedWidgetOfExactType<AppBarModel>()!.text =
-                'Sozlamalar';
+                'Vaqt';
           } else if (value == 1) {
             context.dependOnInheritedWidgetOfExactType<AppBarModel>()!.text =
                 "O'rganish";
